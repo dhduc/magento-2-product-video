@@ -33,9 +33,10 @@
     "phpdocumentor/phpdocumentor": "^2.8"
   },
   "scripts": {
-    "phpcs": "php vendor/bin/phpcs --standard=PSR2 --exclude=Generic.Files.LineLength Block/",
-    "phpmd": "php vendor/bin/phpmd Block/ text cleancode,codesize,controversial,design,naming,unusedcode",
-    "phpcpd": "php vendor/bin/phpcpd Block/"
+    "phpcs": "php vendor/bin/phpcs --standard=PSR2 --exclude=Generic.Files.LineLength Block/ Test/",
+    "phpmd": "php vendor/bin/phpmd Block/,Test/ text cleancode,codesize,controversial,design,naming,unusedcode",
+    "phpcpd": "php vendor/bin/phpcpd Block/ Test/",
+    "phpunit": "php vendor/bin/phpunit --testdox"
   },
   "autoload": {
     "files": [ "registration.php" ],
